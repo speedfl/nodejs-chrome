@@ -13,7 +13,5 @@ RUN echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' >
  
 ENV CHROME_BIN /usr/bin/google-chrome
 
-# create user
-RUN addgroup -g 1001 -S appuser && adduser -u 1001 -S appuser -G appuser
-
-user appuser
+# Use user node
+USER node
